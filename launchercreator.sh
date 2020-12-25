@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "script running at ......................$0 $)hostname)"
+echo "script running at ......................$0 $(hostname)"
 clear
 cat << EOF
 
