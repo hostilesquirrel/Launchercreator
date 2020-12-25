@@ -1,5 +1,6 @@
 #! /bin/bash
 echo "script running at ......................$0 $(hostname)"
+sleep 1
 clear
 cat << EOF
 
