@@ -1,3 +1,9 @@
+#Made fall of 2019 works efficiently.........
+
+
+
+
+
 #! /bin/bash
 echo "script running at ......................$0 $(hostname)"
 sleep 1
@@ -30,16 +36,25 @@ sleep 7
 clear
 
 echo "Enter the name of the application"
+echo "e.g pycharm"
 
 read app_name
 
 echo "Enter the execution path"
+echo "e.g /opt/pycharm/bin/pycharm.sh"
 
 read exec_path
 
 echo "Enter icon path"
+echo "e.g /opt/pycharm/bin/pycharm.sh"
 
 read icon_path
+
+#echo "Enter categories"
+#echo "**Observe how usual applications are aligned https://specifications.freedesktop.org/menu-spec/latest/apa.html"
+#echo "e.g Development;IDE;"
+
+#read categories_dev
 
 echo "Is terminal required type true/false"
 
