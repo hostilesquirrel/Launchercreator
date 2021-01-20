@@ -64,6 +64,7 @@ if [ $continue = "yes" ]; then
 
 
 
+
 	#echo "Enter icon path"
 	#echo "e.g /opt/pycharm/bin/pycharm.sh"
 
@@ -90,20 +91,18 @@ fi
 #read malibu 
 {
 
-    echo ' [Desktop Entry] '
-    echo ' Version=1.0 '
-    echo ' Type=Application '
-    echo ' Name='$app_name
-    echo ' Exec= '$exec_path
-    echo ' Icon= '$icon_path
-    #echo ' Categories=Development;IDE; '
-
-    echo ' Terminal= '$terminal_true_false
+    echo '[Desktop Entry]' | xargs
+    echo 'Version=1.0 ' | xargs
+    echo 'Type=Application ' | xargs
+    echo 'Name='$app_name | xargs
+    echo 'Exec='$exec_path | xargs  
+    echo 'Icon= '$icon_path|xargs
+    echo 'Terminal'=$terminal_true_false | xargs
 } >>coky.desktop
 
 
 mv coky.desktop $app_name.desktop
 
-sudo mv $app_name /usr/share/applications
+#sudo mv $app_name /usr/share/applications
 
 
