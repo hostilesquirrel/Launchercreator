@@ -6,59 +6,86 @@
 
 #! /bin/bash
 echo "script running at ......................$0 $(hostname)"
-sleep 1
+#sleep 1
 clear
 cat << EOF
 
-                匚尺乇卂ㄒ乇 ㄥ卂ㄩ几匚卄乇尺丂 乇卂丂丨ㄥㄚ
+                	CREATE LAUNCHERS EASILY
 
-        🇫‌🇴‌🇱‌🇱‌🇴‌🇼‌ 🇹‌🇭‌🇪‌ 🇮‌🇳‌🇸‌🇹‌🇷‌🇺‌🇨‌🇹‌🇮‌🇴‌🇳‌🇸‌ 🇨‌🇴‌🇵‌🇾‌🇮‌🇳‌🇬‌ 🇵‌🇦‌🇹‌🇭‌🇸‌ 🇹‌🇴‌
-         🇮‌🇨‌🇴‌🇳‌🇸‌ 🇦‌🇳‌🇩‌ 🇪‌🇽‌🇪‌🇨‌🇺‌🇹‌🇦‌🇧‌🇱‌🇪‌🇸‌
+ 					FOLLOW THE INSTRUCTIONS
 
 EOF
 sleep 3
 clear
 
-cat << EOF
-🇮‌🇳‌🇸‌🇹‌🇷‌🇺‌🇨‌🇹‌🇮‌🇴‌🇳‌🇸‌
+#cat << EOF
+#INSTRUCTIONS
 
-1. In your application folder copy the application executable (.sh .py etc)
-2. Enter the paths where you will be asked by the script
-                examples
-                Execution path: /folder/executable
-                Icon path: /folder/icon.jpeg/png/etc
-3. Does the application require a terminal /Yes or no/ type true or false (mostly false)
+#1. In your application folder copy the application executable (.sh .py etc)
+#2. Enter the paths where you will be asked by the script
+#                examples
+#                Execution path: /folder/executable
+#                Icon path: /folder/icon.jpeg/png/etc
+#3. Does the application require a terminal /Yes or no/ type true or false (mostly false)
 
                 ###Starting in 7 seconds###
 
-EOF
-sleep 7
+#EOF
+
 clear
+zenity --title "launcher-creator" --info --text "
+INSTRUCTIONS
 
-echo "Enter the name of the application"
-echo "e.g pycharm"
+1. Enter app name
+2. Choose Executable
+3. Choose Icon
+4. Type terminal true/false
 
-read app_name
+                
+" --width="600"
 
-echo "Enter the execution path"
-echo "e.g /opt/pycharm/bin/pycharm.sh"
+#echo "Enter the name of the application"
+#echo "e.g pycharm"
+#read app_name
 
-read exec_path
+continue=$(zenity --title "launcher-creator" --entry --text="Do you want to continue yes/no" --width="400" --height="150")
 
-echo "Enter icon path"
-echo "e.g /opt/pycharm/bin/pycharm.sh"
+if [ $continue = "yes" ]; then
+	app_name=$(zenity --title "launcher-creator" --entry --text="Enter app name" --width="400" --height="150")
 
-read icon_path
+	
+
+	#echo "Enter the execution path"
+	#echo "e.g /opt/pycharm/bin/pycharm.sh"
+	#read exec_path
+
+	exec_path=$(zenity --title "Pick executable (shell/python etc)" --file-selection)
+
+
+
+
+	#echo "Enter icon path"
+	#echo "e.g /opt/pycharm/bin/pycharm.sh"
+
+	#read icon_path
+	icon_path=$(zenity --title "Icon path (png/jpeg/bmap)" --file-selection)
+
+terminal_true_false=$(zenity --title "launcher-creator" --entry --text="Do you want terminal (true/false)" --width="400" --height="150")
+else
+	break
+fi
 
 #echo "Enter categories"
 #echo "**Observe how usual applications are aligned https://specifications.freedesktop.org/menu-spec/latest/apa.html"
 #echo "e.g Development;IDE;"
 
 #read categories_dev
+#categories_dev=$(zenity --title "launcher-creator" --entry --text="Enter app name" --width="400" --height="150")
 
-echo "Is terminal required type true/false"
+#echo "Is terminal required type true/false"
 
-read terminal_true_false
+#read terminal_true_false
+
 
 #read malibu 
 {
@@ -70,6 +97,7 @@ read terminal_true_false
     echo ' Exec= '$exec_path
     echo ' Icon= '$icon_path
     #echo ' Categories=Development;IDE; '
+
     echo ' Terminal= '$terminal_true_false
 } >>coky.desktop
 
