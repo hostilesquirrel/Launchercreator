@@ -9,9 +9,9 @@ After installing chmod +x launchercreator.sh
 
 <img src="https://user-images.githubusercontent.com/44660508/105380177-a875d180-5c1e-11eb-9eba-824c07f10cc6.png" />
 
-<img scrc="https://user-images.githubusercontent.com/44660508/105380193-ab70c200-5c1e-11eb-8c37-27fc0973aacd.png" />
+<img src="https://user-images.githubusercontent.com/44660508/105380193-ab70c200-5c1e-11eb-8c37-27fc0973aacd.png" />
 
-<img scrc="https://user-images.githubusercontent.com/44660508/105380257-b9bede00-5c1e-11eb-8b96-22421bfd4b41.png" />
+<img src="https://user-images.githubusercontent.com/44660508/105380257-b9bede00-5c1e-11eb-8b96-22421bfd4b41.png" />
 
 FOLLOW INSTRUCTIONS
 
