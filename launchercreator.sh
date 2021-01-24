@@ -103,6 +103,6 @@ fi
 
 mv coky.desktop $app_name.desktop
 
-#sudo mv $app_name /usr/share/applications
+sudo mv $app_name /usr/share/applications
 
 
