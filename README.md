@@ -1,6 +1,7 @@
 # Launchercreator
 This applications creates .desktop entries creating launcher icons for your applications hence saving you the unnecessary time wasted googling on how to do it
-
+ 
+--CLI- install will be modified to allow 2 way choices
 
 ### HOW TO LAUNCH
 
