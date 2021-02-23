@@ -18,8 +18,6 @@ FOLLOW INSTRUCTIONS
 
 #CONVERT TO CLI by removing Zenity
 
-For newbie switch to CLI
-if you still dont understand on GUI after opening the application folder type required command to open folder in terminal such as f4 then type pwd
 
 ©Malibu 2020
 
